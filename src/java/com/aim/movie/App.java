@@ -26,7 +26,7 @@ public class App {
                 System.out.printf("%-30.30s%n", resultSet.getString("movie_name"));
             }
 
-        }  catch(SQLException e) {
+        } catch (SQLException e) {
             System.out.println("Connection failure.");
         }
     }

@@ -4,10 +4,15 @@ import java.util.Date;
 
 public class Movie {
 
-    private Integer id;
+    private int movieId;
+    private int directorId;
     private String movieName;
     private int movieLength;
     private Date releaseDate;
+
+    Movie() {
+
+    }
 
     Movie(String movieName, int movieLength, Date releaseDate) {
         this.movieName = movieName;
@@ -15,19 +20,11 @@ public class Movie {
         this.releaseDate = releaseDate;
     }
 
-    Movie(int id, String movieName, int movieLength, Date releaseDate) {
-        this.id = id;
+    Movie(int movieId, int directorId, String movieName, int movieLength, Date releaseDate) {
+        this.movieId = movieId;
         this.movieName = movieName;
         this.movieLength = movieLength;
         this.releaseDate = releaseDate;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getMovieName() {
@@ -52,6 +49,22 @@ public class Movie {
 
     public void setReleaseDate(Date releaseDate) {
         this.releaseDate = releaseDate;
+    }
+
+    public void setMovieId(int movieId) {
+        this.movieId = movieId;
+    }
+
+    public int getDirectorId() {
+        return directorId;
+    }
+
+    public void setDirectorId(int directorId) {
+        this.directorId = directorId;
+    }
+
+    public int getMovieId() {
+        return movieId;
     }
 
 }
