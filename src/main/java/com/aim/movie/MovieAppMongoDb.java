@@ -11,7 +11,7 @@ import com.mongodb.client.MongoDatabase;
 
 import org.bson.Document;
 
-public class MovieAppMongo {
+public class MovieAppMongoDb {
 
     public static void main(String[] args) {
 
