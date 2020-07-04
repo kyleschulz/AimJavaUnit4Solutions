@@ -1,4 +1,4 @@
-package com.aim.movie.model;
+package com.aim.movie.util;
 
 public enum PostgreSQL {
     URL("jdbc:postgresql://localhost:5432/movie"), USER("postgres"), PASS("bigredarmy");

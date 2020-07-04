@@ -1,4 +1,4 @@
-package com.aim.movie;
+package com.aim.movie.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

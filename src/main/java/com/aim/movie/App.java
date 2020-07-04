@@ -18,16 +18,21 @@ public class App {
             System.out.println("Java JDBC PostgreSQL Example");
             System.out.println("Connected to PostgreSQL database!");
             Statement statement = connection.createStatement();
-            System.out.println("Reading car records...");
-            System.out.printf("%-30.30s  %-30.30s%n", "Model", "Price");
+            System.out.println("Reading movie records...\n");
+            System.out.format("%-30.30s  %-30.30s%n", "Movie Name", "Director");
+            System.out.format("%-30.30s  %-30.30s%n", "----------", "--------");
 
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM movies");
+            ResultSet resultSet = statement.executeQuery(
+                    "SELECT m.movie_name, concat(d.first_name, ' ', d.last_name) full_name FROM movies m JOIN directors d on m.director_id = d.director_id;");
             while (resultSet.next()) {
-                System.out.printf("%-30.30s%n", resultSet.getString("movie_name"));
+                System.out.format("%-30.30s  %-30.30s%n", resultSet.getString("movie_name"),
+                        resultSet.getString("full_name"));
             }
 
         } catch (SQLException e) {
             System.out.println("Connection failure.");
+        } finally {
+            System.out.println("\nGoodbye ...");
         }
     }
 }

@@ -3,7 +3,8 @@ package com.aim.movie;
 import java.sql.Connection;
 import java.util.Scanner;
 
-import com.aim.movie.model.MySQL;
+import com.aim.movie.util.MySQL;
+import com.aim.movie.util.ConnectionFactory;
 import com.aim.movie.dao.Dao;
 import com.aim.movie.dao.MovieDao;
 import com.aim.movie.dao.MovieMySqlDao;
