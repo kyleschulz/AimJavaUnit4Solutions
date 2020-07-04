@@ -3,7 +3,7 @@ package com.aim.movie;
 import java.sql.Connection;
 import java.util.Scanner;
 
-import com.aim.movie.model.MySQL;
+import com.aim.movie.model.PostgreSQL;
 import com.aim.movie.dao.Dao;
 import com.aim.movie.dao.MovieDao;
 import com.aim.movie.dao.MoviePostgreSqlDao;
@@ -15,7 +15,8 @@ public class MovieAppPostgreSqlJdbc {
     private static Dao<Movie> movieDao;
 
     public static void main(String[] args) {
-        connection = ConnectionFactory.getConnection(MySQL.URL.value, MySQL.USER.value, MySQL.PASS.value);
+        connection = ConnectionFactory.getConnection(PostgreSQL.URL.value, PostgreSQL.USER.value,
+                PostgreSQL.PASS.value);
 
         movieDao = new MoviePostgreSqlDao();
 
