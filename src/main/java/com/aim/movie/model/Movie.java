@@ -1,4 +1,4 @@
-package com.aim.movie;
+package com.aim.movie.model;
 
 import java.util.Date;
 
@@ -10,17 +10,17 @@ public class Movie {
     private int movieLength;
     private Date releaseDate;
 
-    Movie() {
+    public Movie() {
 
     }
 
-    Movie(String movieName, int movieLength, Date releaseDate) {
+    public Movie(String movieName, int movieLength, Date releaseDate) {
         this.movieName = movieName;
         this.movieLength = movieLength;
         this.releaseDate = releaseDate;
     }
 
-    Movie(int movieId, int directorId, String movieName, int movieLength, Date releaseDate) {
+    public Movie(int movieId, int directorId, String movieName, int movieLength, Date releaseDate) {
         this.movieId = movieId;
         this.movieName = movieName;
         this.movieLength = movieLength;

@@ -6,7 +6,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
-public class GetMovie {
+import com.aim.movie.model.Movie;
+
+public class MovieAppJDBC {
 
     private static Connection connection;
 

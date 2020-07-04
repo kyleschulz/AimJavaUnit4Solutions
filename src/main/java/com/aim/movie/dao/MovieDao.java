@@ -1,6 +1,8 @@
-package com.aim.movie;
+package com.aim.movie.dao;
 
 import java.util.Set;
+
+import com.aim.movie.model.Movie;
 
 public interface MovieDao {
 

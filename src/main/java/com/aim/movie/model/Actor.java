@@ -1,4 +1,4 @@
-package com.aim.movie;
+package com.aim.movie.model;
 
 public class Actor {
 

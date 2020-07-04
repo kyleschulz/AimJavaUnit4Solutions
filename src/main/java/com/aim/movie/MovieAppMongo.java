@@ -2,6 +2,7 @@ package com.aim.movie;
 
 import java.util.Iterator;
 
+import com.aim.movie.model.Actor;
 import com.mongodb.MongoClient;
 import com.mongodb.MongoClientURI;
 import com.mongodb.client.FindIterable;
@@ -10,7 +11,7 @@ import com.mongodb.client.MongoDatabase;
 
 import org.bson.Document;
 
-public class MongoMovie {
+public class MovieAppMongo {
 
     public static void main(String[] args) {
 
