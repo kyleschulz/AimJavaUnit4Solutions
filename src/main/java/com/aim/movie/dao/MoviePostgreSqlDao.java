@@ -1,18 +1,17 @@
-package com.aim.movie;
+package com.aim.movie.dao;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Scanner;
+import java.util.List;
+import java.util.Optional;
 
 import com.aim.movie.model.Movie;
 
-public class MovieAppJDBC {
+public class MoviePostgreSqlDao extends MovieDao {
 
-    private static Connection connection;
-
-    public static Movie getMovie(Connection connection, String movieName) {
+    public Movie getMovieByName(Connection connection, String movieName) {
         try {
             Statement stmt = connection.createStatement();
             ResultSet rs = stmt.executeQuery("SELECT * FROM movies WHERE lower(movie_name) = '" + movieName + "';");
@@ -31,19 +30,34 @@ public class MovieAppJDBC {
         return null;
     }
 
-    public static void main(String[] args) {
-        connection = ConnectionFactory.getConnection();
+    @Override
+    public Optional<Movie> get(long id) {
+        // TODO Auto-generated method stub
+        return null;
+    }
 
-        Scanner input = new Scanner(System.in);
-        String movieName = input.next().toLowerCase();
-        input.close();
+    @Override
+    public List<Movie> getAll() {
+        // TODO Auto-generated method stub
+        return null;
+    }
 
-        Movie movie = getMovie(connection, movieName);
-        if (movie != null) {
-            System.out.println("Movie: " + movie.getMovieLength());
-        } else {
-            System.out.println("Movie: " + "could not find movie.");
-        }
+    @Override
+    public void save(Movie t) {
+        // TODO Auto-generated method stub
 
     }
+
+    @Override
+    public void update(Movie t, String[] params) {
+        // TODO Auto-generated method stub
+
+    }
+
+    @Override
+    public void delete(Movie t) {
+        // TODO Auto-generated method stub
+
+    }
+
 }

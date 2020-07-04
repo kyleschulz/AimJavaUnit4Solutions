@@ -11,16 +11,12 @@ import java.util.logging.Logger;
 
 public class ConnectionFactory {
 
-    public static final String URL = "jdbc:postgresql://localhost:5432/movie";
-    public static final String USER = "postgres";
-    public static final String PASS = "bigredarmy";
-
     /**
      * Get a connection to database
      * 
      * @return Connection object
      */
-    public static Connection getConnection() {
+    public static Connection getConnection(String url, String user, String pass) {
         try {
             DriverManager.registerDriver(new Driver() {
 
@@ -66,7 +62,7 @@ public class ConnectionFactory {
                     return false;
                 }
             });
-            return DriverManager.getConnection(URL, USER, PASS);
+            return DriverManager.getConnection(url, user, pass);
         } catch (SQLException ex) {
             throw new RuntimeException("Error connecting to the database", ex);
         }
