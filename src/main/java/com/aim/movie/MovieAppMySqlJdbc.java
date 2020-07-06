@@ -4,6 +4,9 @@ import java.sql.Connection;
 import java.util.Scanner;
 
 import com.aim.movie.util.MySQL;
+
+import org.apache.commons.lang3.StringUtils;
+
 import com.aim.movie.util.ConnectionFactory;
 import com.aim.movie.dao.Dao;
 import com.aim.movie.dao.MovieDao;
@@ -27,7 +30,7 @@ public class MovieAppMySqlJdbc {
         Movie movie = ((MovieDao) movieDao).getMovieByName(connection, movieName);
 
         if (movie != null) {
-            System.out.println("Movie: " + movie.getMovieLength());
+            System.out.println("Movie: " + StringUtils.abbreviate(movie.getMovieName(), 4));
         } else {
             System.out.println("Movie: " + "could not find movie.");
         }
