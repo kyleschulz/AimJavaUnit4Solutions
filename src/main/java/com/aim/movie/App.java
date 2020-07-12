@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class App {
-
+//
     public static final String URL = "jdbc:postgresql://localhost:5432/movie";
     public static final String USER = "postgres";
     public static final String PASS = "bigredarmy";
